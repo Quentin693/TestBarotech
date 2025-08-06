@@ -84,6 +84,20 @@
     padding: 2rem;
 }
 
+/* Classe spécifique pour barOtech */
+.article-hero-barotech {
+    height: 400px;
+    overflow: hidden;
+}
+
+.article-hero-barotech img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #f8f9fa;
+    padding: 2rem;
+}
+
 /* Contenu de l'article */
 .article-content {
     padding: 3rem;
@@ -252,6 +266,14 @@ blockquote {
         height: 300px;
     }
     
+    .article-hero-barotech {
+        height: 250px;
+    }
+    
+    .article-hero-barotech img {
+        padding: 1.5rem;
+    }
+    
     .article-content {
         padding: 2rem;
     }
@@ -306,6 +328,15 @@ blockquote {
     
     .article-hero {
         height: 250px;
+    }
+    
+    .article-hero-barotech {
+        height: 200px;
+    }
+    
+    .article-hero-barotech img {
+        padding: 1rem;
+        object-fit: contain;
     }
     
     .article-content {
