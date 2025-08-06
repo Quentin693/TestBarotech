@@ -1,0 +1,249 @@
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+    padding: 2rem 1rem;
+}
+
+/* Container principal - adapté pour le nouveau layout */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+/* Carte de blog - adaptée pour la grille */
+.blog-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Image de la carte */
+.card-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+/* Contenu de la carte */
+.card-content {
+    padding: 1.5rem;
+}
+
+/* Badge de catégorie */
+.card-category {
+    margin-bottom: 1rem;
+}
+
+.category-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Titre de l'article */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+/* Résumé de l'article */
+.card-summary {
+    color: #4a5568;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Bouton "Lire la suite" */
+.read-more-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.read-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.read-more-btn:hover::before {
+    left: 0;
+}
+
+.read-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Styles responsifs adaptés au nouveau layout */
+
+/* Desktop et tablettes (≥1024px) */
+@media (min-width: 1024px) {
+    .blog-card {
+        max-width: none;
+    }
+    
+    .card-title {
+        font-size: 1.3rem;
+    }
+    
+    .card-summary {
+        font-size: 1rem;
+    }
+}
+
+/* Tablettes moyennes (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+    body {
+        padding: 1.5rem 1rem;
+    }
+    
+    .card-title {
+        font-size: 1.2rem;
+    }
+    
+    .card-summary {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile et petites tablettes (≤767px) */
+@media (max-width: 767px) {
+    body {
+        padding: 1rem 0.5rem;
+    }
+    
+    .blog-card {
+        max-width: none;
+    }
+    
+    .card-image {
+        height: 200px;
+    }
+    
+    .card-content {
+        padding: 1.25rem;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .card-summary {
+        font-size: 0.85rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .read-more-btn {
+        padding: 0.65rem 1.25rem;
+        font-size: 0.85rem;
+    }
+    
+    .category-badge {
+        font-size: 0.7rem;
+        padding: 0.35rem 0.7rem;
+    }
+}
+
+/* Très petits écrans (≤480px) */
+@media (max-width: 479px) {
+    body {
+        padding: 0.5rem;
+    }
+    
+    .card-content {
+        padding: 1rem;
+    }
+    
+    .card-image {
+        height: 180px;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+    }
+    
+    .card-summary {
+        font-size: 0.8rem;
+    }
+}
+
+/* Styles pour la page simple (sans sidebar) */
+.container .blog-card {
+    max-width: 400px;
+}
+
+/* Responsive pour la page simple */
+@media (max-width: 767px) {
+    .container .blog-card {
+        width: 90%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 479px) {
+    .container .blog-card {
+        width: 95%;
+    }
+} 

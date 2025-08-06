@@ -1,0 +1,355 @@
+/* Styles spécifiques pour la page d'article */
+
+.article-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* Header de l'article */
+.article-header {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.breadcrumb {
+    margin-bottom: 1.5rem;
+}
+
+.back-link {
+    color: #6c757d;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #667eea;
+}
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.publish-date {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.article-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2d3748;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.article-subtitle {
+    font-size: 1.2rem;
+    color: #4a5568;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Image hero */
+.article-hero {
+    height: 400px;
+    overflow: hidden;
+}
+
+.article-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Styles spécifiques pour l'image barOtech */
+.article-hero img[src*="linkedin.com"],
+.article-hero img[src*="barotech"] {
+    object-fit: contain;
+    background-color: #f8f9fa;
+    padding: 2rem;
+}
+
+.article-hero-barotech img[src*="linkedin.com"],
+.article-hero-barotech img[src*="barotech"] {
+    object-fit: cover;
+    background-color: #f8f9fa;
+    padding: 2rem;
+}
+
+/* Contenu de l'article */
+.article-content {
+    padding: 3rem;
+}
+
+.content-section {
+    margin-bottom: 3rem;
+}
+
+.content-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #667eea;
+    display: inline-block;
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+}
+
+.content-section ul,
+.content-section ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
+}
+
+.content-section li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+}
+
+.content-section li strong {
+    color: #2d3748;
+}
+
+/* Citations */
+blockquote {
+    background: #f8f9fa;
+    border-left: 4px solid #667eea;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #2d3748;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Footer de l'article */
+.article-footer {
+    padding: 2rem;
+    background: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.author-avatar {
+    flex-shrink: 0;
+}
+
+.author-avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #667eea;
+}
+
+.author-details h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.author-details p {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.article-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.back-to-blog {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.back-to-blog:hover {
+    color: #764ba2;
+}
+
+.share-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.share-buttons span {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.share-btn {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #667eea;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.share-btn:hover {
+    background: #667eea;
+    color: white;
+}
+
+/* Responsive pour l'article */
+
+/* Tablettes */
+@media (max-width: 768px) {
+    .article-container {
+        margin: 1rem;
+        border-radius: 12px;
+    }
+    
+    .article-header {
+        padding: 1.5rem;
+    }
+    
+    .article-title {
+        font-size: 2rem;
+    }
+    
+    .article-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .article-hero {
+        height: 300px;
+    }
+    
+    .article-content {
+        padding: 2rem;
+    }
+    
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .content-section p,
+    .content-section li {
+        font-size: 1rem;
+    }
+    
+    .author-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .article-actions {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+    
+    .share-buttons {
+        justify-content: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+    }
+    
+    .article-container {
+        margin: 0;
+        border-radius: 8px;
+    }
+    
+    .article-header {
+        padding: 1rem;
+    }
+    
+    .article-title {
+        font-size: 1.6rem;
+    }
+    
+    .article-subtitle {
+        font-size: 1rem;
+    }
+    
+    .article-hero {
+        height: 250px;
+    }
+    
+    .article-content {
+        padding: 1.5rem;
+    }
+    
+    .content-section {
+        margin-bottom: 2rem;
+    }
+    
+    .content-section h2 {
+        font-size: 1.3rem;
+    }
+    
+    .content-section p,
+    .content-section li {
+        font-size: 0.95rem;
+    }
+    
+    .content-section ul,
+    .content-section ol {
+        padding-left: 1.5rem;
+    }
+    
+    blockquote {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+    
+    .article-footer {
+        padding: 1.5rem;
+    }
+    
+    .author-avatar img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .share-buttons {
+        flex-wrap: wrap;
+    }
+    
+    .share-btn {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+} 

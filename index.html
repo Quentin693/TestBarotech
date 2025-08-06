@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+    <div class="main-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Catégories</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="category-list">
+                    <li class="category-item active">
+                        <a href="index.html" class="category-link">
+                            <span class="category-icon">📄</span>
+                            <span class="category-name">Tous les articles</span>
+                            <span class="category-count">3</span>
+                        </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="technologie.html" class="category-link">
+                            <span class="category-icon">💻</span>
+                            <span class="category-name">Technologie</span>
+                            <span class="category-count">1</span>
+                        </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="droit.html" class="category-link">
+                            <span class="category-icon">⚖️</span>
+                            <span class="category-name">Droit & Avocats</span>
+                            <span class="category-count">1</span>
+                        </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="business.html" class="category-link">
+                            <span class="category-icon">💼</span>
+                            <span class="category-name">Business</span>
+                            <span class="category-count">1</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="newsletter-signup">
+                    <h4>Newsletter</h4>
+                    <p>Restez informé des derniers articles</p>
+                    <form class="newsletter-form" action="#" method="post">
+                        <input type="email" placeholder="Votre email" class="email-input" required>
+                        <button type="submit" class="subscribe-btn">S'abonner</button>
+                    </form>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Contenu principal -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Tous les articles</h1>
+                <p class="content-subtitle">Découvrez nos derniers articles sur différents sujets</p>
+            </header>
+
+            <div class="articles-grid">
+                <!-- Article IA (Technologie) -->
+                <article class="blog-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Intelligence artificielle" />
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="card-category">
+                            <span class="category-badge">Technologie</span>
+                        </div>
+                        
+                        <h2 class="card-title">L'avenir de l'intelligence artificielle dans le développement web</h2>
+                        
+                        <p class="card-summary">
+                            Découvrez comment l'IA transforme la façon dont nous concevons et développons des applications web modernes. 
+                            De l'automatisation du code à l'optimisation des performances, explorez les tendances qui façonnent l'avenir du web.
+                        </p>
+                        
+                        <a href="article-ia.html" class="read-more-btn">Lire la suite</a>
+                    </div>
+                </article>
+
+                <!-- Article barOtech (Droit) -->
+                <article class="blog-card">
+                    <div class="card-image">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E22AQHg3yfb0SZBvw/feedshare-shrink_800/feedshare-shrink_800/0/1696256265007?e=2147483647&v=beta&t=1lOEpc0zwREpp-HzuX9_zqKmWWqOgT6Zi3lEQUXfjRY" alt="Innovation juridique à Lyon" />
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="card-category">
+                            <span class="category-badge droit">Droit & Avocats</span>
+                        </div>
+                        
+                        <h2 class="card-title">barOtech Lyon : l'innovation au service du droit</h2>
+                        
+                        <p class="card-summary">
+                            Découvrez barOtech, la startup lyonnaise qui révolutionne la pratique juridique grâce à des solutions 
+                            technologiques innovantes. Focus sur cette entreprise qui transforme l'écosystème légal français.
+                        </p>
+                        
+                        <a href="article-barotech.html" class="read-more-btn">Lire la suite</a>
+                    </div>
+                </article>
+
+                <!-- Article Startups (Business) -->
+                <article class="blog-card">
+                    <div class="card-image">
+                        <img src="https://www.resultist.com/hubfs/building-a-strategic-buisness-plan.jpeg" alt="Business et entrepreneuriat" />
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="card-category">
+                            <span class="category-badge business">Business</span>
+                        </div>
+                        
+                        <h2 class="card-title">Stratégies de croissance pour les startups en 2024</h2>
+                        
+                        <p class="card-summary">
+                            Les meilleures pratiques pour développer votre startup dans un environnement concurrentiel. 
+                            De la validation de marché au scaling, découvrez les étapes clés du succès entrepreneurial.
+                        </p>
+                        
+                        <a href="article-business.html" class="read-more-btn">Lire la suite</a>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </div>
+</body>
+</html> 
